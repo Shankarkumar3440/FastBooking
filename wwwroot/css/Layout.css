@@ -1,0 +1,20 @@
+﻿
+.navbar {
+    background-color: rgb(241 238 238) !important;
+    padding-right: 109px;
+    padding-left: 115px;
+    box-sizing:border-box;
+}
+.border-bottom {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.navbar a {
+    color: yellow;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    border:0;
+    vertical-align:middle;
+}

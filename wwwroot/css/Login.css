@@ -1,0 +1,46 @@
+﻿body {
+    background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2F2727));
+    background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
+    background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
+    background: -ms-radial-gradient(circle, #1a82f7, #2F2727);
+    height: 100vh;
+    color: #2a2a2a;
+    background-color: antiquewhite;
+}
+
+.centered-form {
+    margin-top: 10%;
+}
+
+    .centered-form .panel {
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+    }
+
+label.label-floatlabel {
+    font-weight: bold;
+    color: #46b8da;
+    font-size: 11px;
+    
+}
+
+.control {
+    padding: 14px;
+    margin: 5px 6px 9px 10px;
+    padding-top: 7px;
+    margin-bottom: 2px;
+    text-align: right;
+    margin-left: 8px;
+}
+
+  .input-group{
+      margin-left:7px;
+      padding-right:13px
+  }
+
+.form-horizontal .control-label {
+    padding-top: 11px;
+    margin-bottom: 0px;
+    text-align: right;
+    margin-left: 8px;
+}

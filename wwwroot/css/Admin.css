@@ -1,0 +1,63 @@
+﻿body {
+    background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
+    background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
+    background: -ms-radial-gradient(circle, #1a82f7, #2F2727);
+    height: 0vh;
+    margin: 2px;
+}
+
+.centered-form {
+    margin-top: 5%;
+}
+
+.panel {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+    border-radius: 5px;
+}
+
+.panel-heading {
+    font-weight: bold;
+    color: #333;
+    padding-right: 4px;
+}
+
+.btn-custom {
+    background-color: #5cb85c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 15px;
+    margin: 3px 4px 12px 6px;
+}
+
+.form-group {
+    margin-left: 5px;
+    margin-right: 16px;
+    border-right-radius: 5px
+}
+
+.input-group {
+    margin-left: 2px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-right: 14px;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #dee2e6 !important;
+    margin-top: -2px;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+    padding-left: 5px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 45px;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}

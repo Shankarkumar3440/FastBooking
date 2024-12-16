@@ -1,0 +1,72 @@
+﻿@model Online_Booking.Models.Registration
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="~/css/registration.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="registration-container">
+            <h3>New User Registration</h3>
+            <form asp-action="Registration" asp-controller="Home" method="post">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label>First Name</label>
+                        <input asp-for="FirstName" class="form-control" placeholder="Enter First Name" required />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Last Name</label>
+                        <input asp-for="LastName" class="form-control" placeholder="Enter Last Name" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label>Mobile No/User Name</label>
+                        <input asp-for="MobileNo" class="form-control" placeholder="Enter Mobile Number" required />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Password</label>
+                        <input asp-for="Password" type="password" class="form-control" placeholder="Enter Password" required />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label>Email ID</label>
+                        <input asp-for="Email" type="email" class="form-control" placeholder="Enter Email ID" required />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>City</label>
+                        <input asp-for="City" class="form-control" placeholder="Enter City" required />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label>Address</label>
+                        <input asp-for="Address" class="form-control" placeholder="Enter Address" required />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Pincode</label>
+                        <input asp-for="Pincode" class="form-control" placeholder="Enter Pincode" required />
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-custom">Register</button>
+                    <a asp-action="Login" asp-controller="Home" class="btn btn-custom">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
