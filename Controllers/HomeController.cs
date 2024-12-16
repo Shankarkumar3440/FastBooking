@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Online_Booking.Models;
 using System.Diagnostics;
 
@@ -23,18 +24,11 @@ namespace Online_Booking.Controllers
             return View();
         }
 
-        public IActionResult SearchBuses()
-        {
-            var model = new RouteDetails();
-
-            // Debugging log to check model state
-            if (model == null || model.Origins == null || model.Destination == null)
-            {
-                Console.WriteLine("Model or its properties are null!");
-            }
-
-            return View(model);
+         public IActionResult SearchBuses()
+          {
+            return View();
         }
+
 
 
 
