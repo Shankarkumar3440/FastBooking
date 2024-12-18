@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Logout";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <form asp-action="Logout" asp-controller="Home" method="post" class="d-inline">
+        <button type="submit" class="btn btn-link nav-link">Logout (@User?.Identity?.Name)</button>
+    </form>
+
+</body>
+</html>
+

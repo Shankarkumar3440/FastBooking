@@ -19,7 +19,10 @@ namespace Online_Booking.Models
 
         public virtual DbSet<Login> Login { get; set; }
 
-        public virtual DbSet<Registration> Registration {get; set;}
+        public virtual DbSet<GoogleLoginUser> GoogleLoginUser { get; set; }
+
+        public virtual DbSet<ApplicationUsers> ApplicationUsers { get; set; }
+
 
         public virtual DbSet<RouteDetails> RouteDetails { get; set; }
 
@@ -31,9 +34,9 @@ namespace Online_Booking.Models
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+       
 
-
-            modelBuilder.Entity<Registration>(entity =>
+            modelBuilder.Entity<Login>(entity =>
             {
                 entity.ToTable("Login");
 

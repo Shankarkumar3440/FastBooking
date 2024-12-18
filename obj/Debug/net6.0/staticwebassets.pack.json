@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\Registration.css"
     },
     {
+      "Id": "C:\\Users\\Shankar Kumar\\source\\repos\\Online Booking\\Online Booking\\wwwroot\\css\\SearchBuses.css",
+      "PackagePath": "staticwebassets\\css\\SearchBuses.css"
+    },
+    {
       "Id": "C:\\Users\\Shankar Kumar\\source\\repos\\Online Booking\\Online Booking\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

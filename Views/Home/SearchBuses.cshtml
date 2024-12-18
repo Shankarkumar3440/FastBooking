@@ -1,90 +1,50 @@
-﻿@model Online_Booking.Models.RouteDetails
-@{
-    ViewData["Title"] = "SearchBuses";
+﻿@{
+    ViewData["Title"] = "Search Buses";
 }
 
-@section Styles {
-    <style>
-        body {
-            background: radial-gradient(circle, #1a82f7, #2F2727);
-            height: 600px;
-        }
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><title>@ViewData["Title"]</title>
+    <link href="~/css/searchbuses.css" rel="stylesheet" />
+        </head>
+    <body>
+        <div class="container-sm">
+            <form action="/Home/SearchBuses" method="post">
+            <div class="container-lg-mn"><h2 class="search"> Search For Available Buses </h2></div>
 
-        .centered-form {
-            margin-top: 10%;
-        }
-
-        .centered-form .panel {
-            background: rgba(255, 255, 255, 0.8);
-            box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
-        }
-
-        label.label-floatlabel {
-            font-weight: bold;
-            color: #46b8da;
-            font-size: 11px;
-        }
-    </style>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $(function () {
-            $("#JourneyDate").datepicker();
-        });
-    </script>
-}
-
-<div class="container" style="margin-top:8%">
-    <div class="row">
-        <div class="col-lg-4 col-sm-4 col-md-4 mx-auto">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Search For Available Buses</h3>
-                </div>
-                <div class="panel-body">
-                    <form method="post">
-                        <div class="form-group">
-                            <label asp-for="Origins" class="label-floatlabel">From</label>
-                            <select asp-for="Origins" class="form-control">
-                                <option value="">Select Origin</option>
-                                @if (Model?.Origins != null)
-                                {
-                                    foreach (var origin in Model.Origins)
-                                    {
-                                        <option value="@origin">@origin</option>
-                                    }
-                                }
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Destination" class="label-floatlabel">To</label>
-                            <select asp-for="Destination" class="form-control">
-                                <option value="">Select Destination</option>
-                                @foreach (var destination in Model.Destination)
-                                {
-                                    <option value="@destination">@destination</option>
-                                }
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="TravelDate" class="label-floatlabel">Travel Date</label>
-                            <input asp-for="TravelDate" class="form-control" placeholder="DD/MM/YYYY Format" id="JourneyDate" />
-                            <span asp-validation-for="TravelDate" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-info btn-block">Search Buses</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="form-group">
+                <label for="from">From:</label>
+                <select id="from" name="from" required class="form-control">
+                    <option value="" disabled selected>-Select City-</option>
+                    <option value="New York">New York</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Houston">Houston</option>
+                    <option value="San Francisco">San Francisco</option>
+                </select>
             </div>
+
+            <div class="form-group">
+                <label for="to">To:</label>
+                <select id="to" name="destination" required class="form-control">
+                    <option value="" disabled selected>-Select City-</option>
+                    <option value="New York">New York</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Houston">Houston</option>
+                    <option value="San Francisco">San Francisco</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Travel Date:</label>
+                <input type="date" id="date" name="date" required class="form-control" />
+            </div>
+            <div class="btn">
+            <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+       
+            </form>
+ 
         </div>
-    </div>
-</div>
-
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
-
+    </body>
+</html>

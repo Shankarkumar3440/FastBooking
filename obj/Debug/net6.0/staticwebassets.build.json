@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JfONahFSjmvWv//s9VmUnXuKiSI4Or+Q3GYgfYfwCMA=",
+  "Hash": "MsgJ6JWo3S2HFvyVeTUFp6L8NbDbsW41jo+Dn7kpIoI=",
   "Source": "Online Booking",
   "BasePath": "_content/Online Booking",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Registration.css"
+    },
+    {
+      "Identity": "C:\\Users\\Shankar Kumar\\source\\repos\\Online Booking\\Online Booking\\wwwroot\\css\\SearchBuses.css",
+      "SourceId": "Online Booking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Shankar Kumar\\source\\repos\\Online Booking\\Online Booking\\wwwroot\\",
+      "BasePath": "_content/Online Booking",
+      "RelativePath": "css/SearchBuses.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\SearchBuses.css"
     },
     {
       "Identity": "C:\\Users\\Shankar Kumar\\source\\repos\\Online Booking\\Online Booking\\wwwroot\\css\\site.css",

@@ -1,9 +1,11 @@
+//using AutoMapper;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.EntityFrameworkCore;
 using Online_Booking.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
+//builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddControllersWithViews();
 
 var provider = builder.Services.BuildServiceProvider();
@@ -18,7 +20,21 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+   .AddCookie(options =>
+   {
+       options.LoginPath = "/Home/Login";  // Redirect to login page
+       options.LogoutPath = "/Home/Logout";  // Redirect to logout page
+   });
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+});
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -34,6 +50,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllerRoute(
     name: "default",

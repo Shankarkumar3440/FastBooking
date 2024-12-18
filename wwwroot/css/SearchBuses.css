@@ -1,0 +1,65 @@
+﻿body {
+    background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2F2727));
+    background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
+    background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
+    background: -ms-radial-gradient(circle, #1a82f7, #2F2727);
+    height: 100vh;
+    color: #2a2a2a;
+    background-color: antiquewhite;
+}
+
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1095px;
+        padding-right: 199px;
+        padding-left: 180px;
+        padding-top: 57px;
+    }
+}
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    margin-top: 14px;
+    margin-left: 139px;
+    padding-left:155px
+}
+
+.btn {
+    padding-left: 99px;
+    padding-right: 128px;
+    margin-left: -29px;
+    margin-right: 40px;
+
+}
+.pb-3 {
+    margin: 1px;
+    color:black;
+}
+.container-sm {
+    background-color: #cdc5c5;
+    border-radius: 5px
+}
+container-lg-mn {
+    padding: 2px
+}
+
+container-along{
+    padding:2px
+}
+select.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+@media (min-width: 1200px) {
+    .h2, h2 {
+        font-size: 28px;
+        color: #140d0d;
+        /* border-block: inherit; */
+    }
+}
